@@ -11,13 +11,21 @@ from typing import Sequence
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
-    i = len(data) - 1
-    if i < 2:
+    if len(data) < 3:
         return False
     else:
-        while i >= 0:
-            if data[i - 2] + data[i - 1] == data[i]:
-                return True
-            else:
+        for i in range(2, len(data)):
+            a = 0
+            b = 1
+            for j in range(i):
+                a = b
+                b = a + b
+                if j != b:
+                    return False
+            if data[i - 2] + data[i - 1] != data[i]:
                 return False
-        i -= 1
+            return True
+
+
+Sequence = [8, 13, 21]
+print(check_fibonacci(Sequence))
