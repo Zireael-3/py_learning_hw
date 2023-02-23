@@ -25,7 +25,3 @@ def check_fibonacci(data: Sequence[int]) -> bool:
             if data[i - 2] + data[i - 1] != data[i]:
                 return False
             return True
-
-
-Sequence = [8, 13, 21]
-print(check_fibonacci(Sequence))
