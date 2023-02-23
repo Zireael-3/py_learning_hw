@@ -15,6 +15,9 @@ def check_fibonacci(data: Sequence[int]) -> bool:
         return False
     else:
         for i in range(2, len(data)):
+            """
+            Checkin if the num is fib num:
+            """
             a = 0
             b = 1
             for j in range(i):
@@ -22,6 +25,9 @@ def check_fibonacci(data: Sequence[int]) -> bool:
                 b = a + b
                 if j != b:
                     return False
+                """
+                Now checkin if the sub sequence is fib sequence
+                """
             if data[i - 2] + data[i - 1] != data[i]:
                 return False
             return True
