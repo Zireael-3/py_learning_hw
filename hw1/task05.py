@@ -22,7 +22,3 @@ def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
         max_sum = curr_sum
     return max_sum
 
-
-n = [1, 3, -1, -3, 5, 3, 6, 7]
-r = find_maximal_subarray_sum(n, 3)
-print(r)
