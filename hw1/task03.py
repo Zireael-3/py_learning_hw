@@ -27,5 +27,3 @@ def find_maximum_and_minimum(file_name: str) -> tuple[float, float]:
     return t
 
 
-r = find_maximum_and_minimum("ex.txt")
-print(r)
