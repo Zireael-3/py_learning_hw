@@ -10,6 +10,10 @@ from typing import List
 
 
 def check_sum_of_four(a: List[int], b: List[int], c: List[int], d: List[int]) -> int:
+    """
+    With a large number of elements, we get a degree of complexity of 10 ^ 4,
+        which is not good, but I did not find another solution
+    """
     res = 0
     for i in range(len(a)):
         for j in range(len(b)):

@@ -14,6 +14,9 @@ from typing import List
 
 def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
     max_sum = 0
+    """
+    Сheckin subarrays and the sum of the elements, no longer than k
+    """
     for i in range(len(nums)):
         curr_sum = 0
         for j in range(len(nums)):

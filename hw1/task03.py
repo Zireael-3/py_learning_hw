@@ -16,6 +16,9 @@ from typing import Tuple, List, Any
 
 
 def find_maximum_and_minimum(file_name: str) -> tuple[float, float]:
+    """
+    Line by line checkin and overwriting the maximum num
+    """
     max_num = float('-inf')
     min_num = float('inf')
     with open(file_name, 'r') as f:

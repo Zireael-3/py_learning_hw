@@ -26,7 +26,7 @@ def check_fibonacci(data: Sequence[int]) -> bool:
                 if j != b:
                     return False
                 """
-                Now checkin if the sub sequence is fib sequence
+                Now checkin if the fib sequence basic rule
                 """
             if data[i - 2] + data[i - 1] != data[i]:
                 return False
