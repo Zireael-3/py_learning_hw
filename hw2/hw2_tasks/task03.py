@@ -33,4 +33,4 @@ the second is from the second and so one"""
         i_list += 1
     return result
 
-
+print(combinations([1, 2], [3, 4], [5, 6]))

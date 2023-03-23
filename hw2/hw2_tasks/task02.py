@@ -36,5 +36,6 @@ def major_and_minor_elem(inp: List) -> Tuple[int, int]:
             m_common = key
         if l_common is None or value < quantity[l_common]:
             l_common = key
-    return int(m_common), int(l_common)
+    result = [int(m_common), int(l_common)]
+    return result
 
