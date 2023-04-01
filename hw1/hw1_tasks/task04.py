@@ -22,5 +22,3 @@ def check_sum_of_four(a: List[int], b: List[int], c: List[int], d: List[int]) ->
                     if a[i] + b[j] + c[k] + d[f] == 0:
                         res += 1
     return res
-
-

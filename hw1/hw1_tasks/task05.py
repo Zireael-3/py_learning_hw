@@ -27,4 +27,3 @@ def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
                 curr_sum += nums[j]
         max_sum = curr_sum
     return max_sum
-

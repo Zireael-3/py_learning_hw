@@ -28,5 +28,3 @@ def find_maximum_and_minimum(file_name: str) -> tuple[float, float]:
             max_num = max(max_num, num)
     t = [min_num, max_num]
     return t
-
-
