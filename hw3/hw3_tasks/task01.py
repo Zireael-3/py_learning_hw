@@ -6,13 +6,13 @@ def cache(times):
     caches = {'value': None, 'count': times}
 
     def caching_process(func):
-        def wrapper(*args):
+        def wrapper(args):
             if caches['count'] > 0 and caches.get('value'):
                 caches['count'] -= 1
-                return caches['value']
+                return f"{caches['value']} from cached_values"
             else:
                 caches['value'] = func(args)
-                return caches['value']
+                return f"{caches['value']} first call"
 
         return wrapper
 
