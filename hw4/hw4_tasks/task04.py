@@ -25,8 +25,8 @@ You will learn:
  - how to write instructions
 
 
-fizzbuzz(5)
-["1", "2", "fizz", "4", "buzz"]
+>>> fizzbuzz(5)
+['1', '2', 'fizz', '4', 'buzz']
 
 * https://en.wikipedia.org/wiki/Fizz_buzz
 ** Энциклопедия профессора Фортрана page 14, 15, "Робот Фортран, чисть картошку!"
@@ -35,8 +35,18 @@ from typing import List
 
 
 def fizzbuzz(n: int) -> List[str]:
+    """function returns fizzbuzz sequence as list of str args
+        To run doctest:
+            1) Open the directory containing test_task04.py file:
+                Input in the command line:
+                    cd \hw4\hw4_tests
+            2) And then run it
+                shift + f10 buttons
+                    or
+                python test_task04.py
+        """
     fizz_buzz_list = []
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
             fizz_buzz_list.append('fizzbuzz')
         elif i % 3 == 0:
