@@ -23,10 +23,12 @@ You will learn:
 
 
 """
-from sys import stderr, stdout
+import sys
 
 
 def my_precious_logger(text: str):
+    line_stderr = sys.stderr
+    line_stdout = sys.stdout
     if text.startswith('error'):
-        stderr.write(text)
-    stdout.write(text)
+        line_stderr.write(text)
+    line_stdout.write(text)
