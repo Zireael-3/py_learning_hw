@@ -41,16 +41,31 @@ import datetime
 
 
 class Homework:
-    """Homework class takes two arguments: exercise_text, num_of_days"""
+    """
+    Homework class takes two arguments: exercise_text, num_of_days
+    Methods:
+    is_active - it turned out that the task execution time has not expired,
+    returns a boolean
+    """
 
     def __init__(self, text, deadline):
         self.text = str(text)
         self.deadline = datetime.timedelta(days=deadline)
         self.created = datetime.datetime.now()
 
+    def is_active(self):
+        return (datetime.datetime.now() - self.created).days < self.deadline.days
+
 
 class Teacher:
-    """gg"""
+    """
+    Attributes:
+        last_name
+        first_name
+    Methods:
+        create_homework - the text of the task and the number of days for this task,
+        returns a Homework instance
+    """
 
     def __init__(self, first_name, last_name):
         self.first_name = first_name
@@ -61,14 +76,21 @@ class Teacher:
 
 
 class Student:
-    """gg"""
+    """
+    Attributes:
+        last_name
+        first_name
+    Methods:
+        do_homework - takes a Homework object and returns it,
+        if the task is already overdue, it prints 'You are late' and returns None
+    """
 
     def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
 
     def do_homework(self, homework):
-        return 'You are late' if (datetime.datetime.now() - homework.created).days > homework.deadline.days else 'In process'
+        return 'You are late' if homework.is_active() else 'In process'
 
 
 if __name__ == '__main__':
