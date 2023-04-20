@@ -31,8 +31,6 @@ def read_magic_number(path: str) -> bool:
         first_line = file.readline().replace('\n', '')
         try:
             float_num = float(first_line)
-            if 1 <= float_num < 3:
-                return True
-            return False
+            return 1 <= float_num < 3
         except:
             return False
