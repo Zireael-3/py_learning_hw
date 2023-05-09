@@ -27,6 +27,12 @@ You will learn:
 
 
 def read_magic_number(path: str) -> bool:
+    """
+    Function that gets file path as an argument, reads the first line of the file.
+    If first line is a number - returns true, if number in an interval [1, 3)* -
+    - false otherwise.
+    In case of any error, a ValueError thrown.
+    """
     with open(path) as file:
         first_line = file.readline().replace('\n', '')
         try:

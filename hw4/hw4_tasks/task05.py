@@ -22,6 +22,10 @@ from typing import Generator
 
 
 def fizzbuzz(n: int) -> Generator[str, None, None]:
+    """
+    Generator that takes a number N as an input
+    and returns a generator that yields N FizzBuzz numbers*
+    """
     fizzbuzz_gen = ('fizz' * (i % 3 == 0) + 'buzz' * (i % 5 == 0) or str(i) for i in range(1, n + 1))
     yield from fizzbuzz_gen
 

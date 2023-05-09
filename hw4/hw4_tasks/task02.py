@@ -29,6 +29,10 @@ import requests
 
 
 def count_dots_on_i(url: str) -> int:
+    """
+    Function that accepts a URL as input
+    and count how many letters `i` are present in the HTML by this URL.
+    """
     response = requests.get(url)
     if response.status_code == 200:
         html = response.text
