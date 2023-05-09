@@ -28,6 +28,10 @@ example_tree = {
 
 
 def find_occurrences(tree: dict, element: Any) -> int:
+    """
+    Function, that takes element and finds the number of occurrences
+    of this element in the tree.
+    """
     count = 0
     for value in tree.values():
         if value == element:
